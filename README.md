@@ -1,14 +1,6 @@
-# Webpack React Express SSR
-
-A boilerplate of web development with React SSR
+# FLOAT
 
 ### Usage
-
-Generate a project that named `my-app`:
-
-```bash
-$ npx webpack-react-express-ssr my-app
-```
 
 - Server host and port can be changed at `settings.js` at project root.
 
