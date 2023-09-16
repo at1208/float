@@ -4,7 +4,6 @@ import cookieParser from "cookie-parser";
 import logger from "morgan";
 import proxy from "express-http-proxy";
 import pageRoutes from "./pages";
-import apisRouter from "./apis";
 const { DEV_ASSETS_HOST, DEV_ASSETS_PORT } = require("../../settings");
 
 const app = express();
@@ -39,9 +38,6 @@ if (__DEV__) {
 } else {
   app.use(express.static(path.join(__dirname, "../client/assets")));
 }
-
-// API endpoints
-app.use("/api", apisRouter);
 
 // All routes for React app
 app.use("/", pageRoutes);
